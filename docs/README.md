@@ -9,28 +9,22 @@ shiro only provide the support of ehcache and concurrentHashMap. Here is an impl
 # Download
 
 You use either of the following 2 ways to include `shiro-redis` into your project
-* use `git clone https://github.com/alexxiyang/shiro-redis.git` to clone project to your local workspace and build jar file by your self
+* use `git clone https://github.com/kuquwu/shiro-redis.git` to clone project to your local workspace and build jar file by your self
 * add maven dependency 
 
 ```xml
 <dependency>
-    <groupId>org.crazycake</groupId>
+    <groupId>com.kuquwu</groupId>
     <artifactId>shiro-redis</artifactId>
-    <version>3.3.1</version>
+    <version>3.3.2</version>
 </dependency>
 ```
 
-> **Note:**\
-> 3.3.0 is compiled in java11 by mistake.
-> Please use 3.3.1 which is compiled in java8
-
 ## shiro-core/jedis Version Comparison Charts
 
-| shiro-redis       | shiro     | jedis     |
-| :----------------:| :-------: | :-------: |
-| 3.2.3             | 1.3.2     | 2.9.0     |
-| 3.3.0 (java11)    | 1.6.0     | 3.3.0     |
-| 3.3.1 (java8)     | 1.6.0     | 3.3.0     |
+|  shiro-redis   | shiro  | jedis |
+|:--------------:|:------:|:-----:|
+| 3.3.2 (java8)  | 1.13.0 | 3.8.0 |
 
 # Before use
 Here is the first thing you need to know. Shiro-redis needs an id field to identify your authorization object in Redis. So please make sure your principal class has a field which you can get unique id of this object. Please setting this id field name by `cacheManager.principalIdFieldName = <your id field name of principal object>`
